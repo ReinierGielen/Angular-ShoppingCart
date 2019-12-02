@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ProductService } from 'src/app/shared/services/product.service';
 import { Product } from 'src/app/shared/models/product';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 declare var $: any;
 declare var require: any;
@@ -14,8 +15,10 @@ const moment = require('moment');
 	templateUrl: './add-product.component.html',
 	styleUrls: [ './add-product.component.scss' ]
 })
+
 export class AddProductComponent implements OnInit {
-	product: Product = new Product();
+  public Editor = ClassicEditor;
+  product: Product = new Product();
 	constructor(private productService: ProductService) {}
 
 	ngOnInit() {}

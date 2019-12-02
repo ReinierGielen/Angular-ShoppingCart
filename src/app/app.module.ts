@@ -25,7 +25,7 @@ export function setupTranslateFactory(service: TranslateService): Function {
 		IndexModule,
 		ProductModule,
 		UserModule,
-		SharedModule,
+    SharedModule,
 		RouterModule.forRoot(AppRoutes),
 		ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
 	],

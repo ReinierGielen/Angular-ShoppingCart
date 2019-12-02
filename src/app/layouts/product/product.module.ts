@@ -18,9 +18,10 @@ import { SharedModule } from "../../shared/shared.module";
 import { FavouriteProductsComponent } from "./favourite-products/favourite-products.component";
 import { CartProductsComponent } from "./cart-products/cart-products.component";
 import { CartCalculatorComponent } from "./cart-calculator/cart-calculator.component";
+import {CKEditorModule} from "@ckeditor/ckeditor5-angular";
 
 @NgModule({
-	imports: [CommonModule, RouterModule.forChild(ProductRoutes), SharedModule, CheckoutModule],
+    imports: [CommonModule, RouterModule.forChild(ProductRoutes), SharedModule, CheckoutModule, CKEditorModule],
 	declarations: [
 		ProductComponent,
 		BestProductComponent,
