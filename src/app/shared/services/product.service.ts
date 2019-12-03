@@ -40,8 +40,8 @@ export class ProductService {
 		return this.product;
 	}
 
-	updateProduct(data: Product) {
-		this.products.update(data.$key, data);
+	updateProduct(key: string, data: Product) {
+		this.products.update(key, data);
 	}
 
 	deleteProduct(key: string) {

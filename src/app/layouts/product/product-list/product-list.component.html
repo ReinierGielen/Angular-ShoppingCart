@@ -3,7 +3,7 @@
   <div class="row" *ngIf="authService.isAdmin()">
     <div class="col-sm">
       <div class="float-right">
-        <button type="button" class="btn btn-primary waves-light" data-toggle="modal" data-target="#exampleModalLong">
+        <button type="button" class="btn btn-primary waves-light" data-toggle="modal" data-target="#addModal">
           Add Product
         </button>
       </div>
@@ -73,6 +73,10 @@
                           (click)="removeProduct(product.$key)">
                           <i class="fa fa-trash"></i>
                         </a>
+                        <a placement="top" mdbTooltip="Edit Product" container="body" *ngIf="authService.isAdmin()"
+                           data-toggle="modal" data-target="#editModal" (click)="editProduct(product)">
+                          <i class="fa fa-edit"></i>
+                        </a>
                       </span>
                     </div>
 
@@ -96,3 +100,5 @@
   </div>
 </div>
 <app-add-product></app-add-product>
+<app-edit-product *ngIf="selectedProduct" [product]="selectedProduct"></app-edit-product>
+

@@ -19,6 +19,7 @@ import { FavouriteProductsComponent } from "./favourite-products/favourite-produ
 import { CartProductsComponent } from "./cart-products/cart-products.component";
 import { CartCalculatorComponent } from "./cart-calculator/cart-calculator.component";
 import {CKEditorModule} from "@ckeditor/ckeditor5-angular";
+import {EditProductComponent} from "./edit-product/edit-product.component";
 
 @NgModule({
     imports: [CommonModule, RouterModule.forChild(ProductRoutes), SharedModule, CheckoutModule, CKEditorModule],
@@ -27,6 +28,7 @@ import {CKEditorModule} from "@ckeditor/ckeditor5-angular";
 		BestProductComponent,
 		ProductListComponent,
 		AddProductComponent,
+    EditProductComponent,
 		ProductDetailComponent,
 		FavouriteProductsComponent,
 		CartProductsComponent,

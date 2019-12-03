@@ -14,6 +14,7 @@ export class ProductListComponent implements OnInit {
 	brands = ['All', 'Google', 'Apple', 'Realme', 'Nokia', 'Motorolla'];
 
 	selectedBrand: 'All';
+	selectedProduct: Product;
 
 	page = 1;
 	constructor(
@@ -50,6 +51,10 @@ export class ProductListComponent implements OnInit {
 	removeProduct(key: string) {
 		this.productService.deleteProduct(key);
 	}
+
+  editProduct(product: Product) {
+    this.selectedProduct = product;
+  }
 
 	addFavourite(product: Product) {
 		this.productService.addFavouriteProduct(product);

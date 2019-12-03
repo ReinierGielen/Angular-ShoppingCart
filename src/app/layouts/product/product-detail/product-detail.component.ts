@@ -3,6 +3,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../../shared/services/product.service';
 import { ToastrService } from 'src/app/shared/services/toastr.service';
+import {AuthService} from "../../../shared/services/auth.service";
 @Component({
 	selector: 'app-product-detail',
 	templateUrl: './product-detail.component.html',
@@ -14,7 +15,8 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
 
 	constructor(
 		private route: ActivatedRoute,
-		private productService: ProductService,
+    public authService: AuthService,
+    private productService: ProductService,
 		private toastrService: ToastrService
 	) {
 		this.product = new Product();

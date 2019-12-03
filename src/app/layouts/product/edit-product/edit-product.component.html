@@ -1,15 +1,15 @@
 <!-- Modal -->
-<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLongTitle" aria-hidden="true">
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Add Product</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Edit Product</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <form class="needs-validation" #addProductForm="ngForm" (ngSubmit)="createProduct(addProductForm)">
+        <form class="needs-validation" #editProductForm="ngForm" (ngSubmit)="editProduct(product.$key, editProductForm)">
           <div class="row">
             <div class="col-md-6 mb-3">
               <label for="productName">Product Name</label>
@@ -70,7 +70,7 @@
 
           <hr class="mb-4">
 
-          <button class="btn btn-primary btn-lg btn-block" type="submit">Add Product</button>
+          <button class="btn btn-primary btn-lg btn-block" type="submit">edit Product</button>
         </form>
       </div>
     </div>
